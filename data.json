@@ -1,80 +1,304 @@
 {
-  "signs": [
-    {"id":"aries", "name":"Овен", "glyph":"♈", "dates":"21.03–19.04"},
-    {"id":"taurus", "name":"Телец", "glyph":"♉", "dates":"20.04–20.05"},
-    {"id":"gemini", "name":"Близнаци", "glyph":"♊", "dates":"21.05–20.06"},
-    {"id":"cancer", "name":"Рак", "glyph":"♋", "dates":"21.06–22.07"},
-    {"id":"leo", "name":"Лъв", "glyph":"♌", "dates":"23.07–22.08"},
-    {"id":"virgo", "name":"Дева", "glyph":"♍", "dates":"23.08–22.09"},
-    {"id":"libra", "name":"Везни", "glyph":"♎", "dates":"23.09–22.10"},
-    {"id":"scorpio", "name":"Скорпион", "glyph":"♏", "dates":"23.10–21.11"},
-    {"id":"sagittarius", "name":"Стрелец", "glyph":"♐", "dates":"22.11–21.12"},
-    {"id":"capricorn", "name":"Козирог", "glyph":"♑", "dates":"22.12–19.01"},
-    {"id":"aquarius", "name":"Водолей", "glyph":"♒", "dates":"20.01–18.02"},
-    {"id":"pisces", "name":"Риби", "glyph":"♓", "dates":"19.02–20.03"}
-  ],
-  "cards": [
-    {"name":"Глупакът","glyph":"🃏","up":"Ново начало и лекота на духа — довери се на първата стъпка, дори без пълна карта на пътя.","rev":"Прибързаност или страх от риска. Спри и провери почвата, преди да скочиш."},
-    {"name":"Магьосникът","glyph":"🪄","up":"Имаш всички средства, от които се нуждаеш. Време е да превърнеш намерението в действие.","rev":"Разпиляна енергия или несигурност в собствените способности. Събери фокуса си."},
-    {"name":"Върховната жрица","glyph":"🌙","up":"Слушай интуицията си повече от логиката днес — отговорът вече е в теб.","rev":"Игнорираш вътрешния си глас. Намери тишина, за да го чуеш отново."},
-    {"name":"Императрицата","glyph":"🌿","up":"Изобилие, грижа и творчество. Денят подкрепя всичко, което отглеждаш — идея, връзка, проект.","rev":"Пренебрегнати нужди — твои или на някой близък. Намери баланс между даване и получаване."},
-    {"name":"Императорът","glyph":"👑","up":"Структура и дисциплина носят резултат. Поеми контрол с увереност, но без твърдост.","rev":"Прекалена нужда от контрол създава напрежение. Отпусни хватката леко."},
-    {"name":"Йерофантът","glyph":"📜","up":"Традиция, съвет от опитен човек или ясни правила ще ти помогнат да напреднеш.","rev":"Времето е да поставиш под въпрос утвърден начин на мислене, който вече не ти служи."},
-    {"name":"Влюбените","glyph":"💫","up":"Избор от сърце, хармония във връзка или съюз на идеи. Довери се на връзката.","rev":"Разминаване на ценности или трудно решение. Погледни какво наистина искаш."},
-    {"name":"Колесницата","glyph":"🏹","up":"Воля и насока — движиш се напред с решителност, дори през препятствия.","rev":"Липса на посока или вътрешен конфликт спъва напредъка. Изясни целта първо."},
-    {"name":"Силата","glyph":"🦁","up":"Мека, но устойчива сила. Търпението и състраданието побеждават грубата принуда.","rev":"Съмнение в себе си или изчерпана енергия. Бъди по-нежен към себе си днес."},
-    {"name":"Отшелникът","glyph":"🕯️","up":"Нужда от уединение и размисъл. Отговорите идват отвътре, не отвън.","rev":"Изолация, която вече тежи. Време е да потърсиш връзка с другите."},
-    {"name":"Колелото на съдбата","glyph":"☸️","up":"Промяна е на прага — обстоятелствата се обръщат в твоя полза.","rev":"Съпротива срещу неизбежна промяна. Приеми потока вместо да го спираш."},
-    {"name":"Справедливостта","glyph":"⚖️","up":"Истина, баланс и справедливо решение. Действията ти днес имат ясни последствия.","rev":"Нечестност или дисбаланс, който трябва да се коригира — включително спрямо себе си."},
-    {"name":"Обесеният","glyph":"🌀","up":"Нова перспектива идва чрез пауза. Понякога напредъкът означава да изчакаш.","rev":"Излишно жертвоприношение или чувство на застой. Провери дали паузата все още служи."},
-    {"name":"Смъртта","glyph":"🦋","up":"Край на един етап, за да започне следващият. Пусни онова, което вече не пасва.","rev":"Съпротива срещу неизбежен преход. Държиш се за нещо, което вече е приключило."},
-    {"name":"Умереността","glyph":"⚗️","up":"Баланс, търпение и умерена крачка водят до хармония.","rev":"Крайности или нетърпение нарушават равновесието. Забави темпото."},
-    {"name":"Дяволът","glyph":"⛓️","up":"Признай навик или привързаност, която те задържа — осъзнаването е първата свобода.","rev":"Освобождаване от ограничение, което вече не служи. Стъпка към лекота."},
-    {"name":"Кулата","glyph":"⚡","up":"Внезапна промяна разрушава фалшива структура, за да отвори място за истина.","rev":"Избягване на назряваща криза удължава напрежението. По-добре е да я посрещнеш."},
-    {"name":"Звездата","glyph":"⭐","up":"Надежда, вдъхновение и изцеление след трудност. Довери се на процеса.","rev":"Загубена вяра или откъснатост от мечтата. Върни се към нещо, което те вдъхновява."},
-    {"name":"Луната","glyph":"🌕","up":"Интуицията говори през символи и сънища. Не всичко трябва да е рационално обяснено днес.","rev":"Объркване или скрита тревога. Изчакай яснота, преди да действаш."},
-    {"name":"Слънцето","glyph":"☀️","up":"Радост, яснота и успех. Денят подкрепя откритост и споделяне.","rev":"Временно затъмнена радост — малка пречка, не крах. Тя ще премине."},
-    {"name":"Съдът","glyph":"🎺","up":"Пробуждане, преоценка и второ начало. Чуваш призив, който трудно се игнорира.","rev":"Самокритика, която пречи на прощаването. Дай си втори шанс."},
-    {"name":"Светът","glyph":"🌍","up":"Завършек на цикъл с чувство за цялост. Признай постигнатото, преди да продължиш напред.","rev":"Незавършена глава. Нещо все още иска финал, преди следващата стъпка."}
-  ],
-  "horoscopeLove": [
-    "В любовта днес е ден за откровен разговор, дори ако избягваш темата от известно време.",
-    "Топлината, която търсиш от другите, започва с това как говориш на себе си днес.",
-    "Малък жест на внимание днес ще тежи повече от големи думи.",
-    "Свободното време с близък човек носи повече яснота от всякакъв анализ.",
-    "Днес е подходящ момент да поставиш граница в отношенията си — с мекота, но твърдо.",
-    "Стар въпрос в сърдечните ти дела намира неочакван отговор днес.",
-    "Слушай повече, отколкото говориш — днес връзките ти го възнаграждават.",
-    "Позволи си да приемеш грижа, вместо винаги да я даваш."
-  ],
-  "horoscopeWork": [
-    "В работата днес приоритизирай едно нещо, вместо да разпръскваш енергия по много посоки.",
-    "Идея, която пазиш за себе си, заслужава да бъде споделена днес.",
-    "Финансов въпрос иска твоето внимание — дори кратък преглед носи спокойствие.",
-    "Сътрудничество върви по-добре от самостоятелна битка днес.",
-    "Малка организационна крачка днес спестява голямо главоболие утре.",
-    "Признание за положен труд идва, макар да не е в очакваната форма.",
-    "Пауза от работа за момент презарежда повече, отколкото форсирано темпо.",
-    "Днес е добър ден да кажеш „не“ на задача, която не е твоя отговорност."
-  ],
-  "horoscopeEnergy": [
-    "Енергията ти днес е по-вътрешна — не насилвай темпо, което не е твоето.",
-    "Тялото иска движение днес, дори кратка разходка променя настроението.",
-    "Почивката днес не е загубено време, а инвестиция в утрешния ден.",
-    "Усещаш прилив на вдъхновение следобед — запази пространство за него.",
-    "Дребен физически дискомфорт е сигнал да забавиш темпото за малко.",
-    "Днес интуицията ти е по-остра от обичайно — обръщай внимание на първите усещания.",
-    "Настроението се движи вълнообразно днес — позволи си да не си еднакъв през целия ден.",
-    "Творческа енергия е висока — добър ден за нещо с ръцете или въображението."
-  ],
-  "astroGlobal": [
-    "Небето подкрепя завършването на недовършени неща повече, отколкото започването на нови.",
-    "Ден с по-бавен ритъм — планетарните влияния благоприятстват размисъл пред действие.",
-    "Комуникацията е под добра звезда днес — разговор, който отлагаш, вероятно ще мине леко.",
-    "Ден за практични крачки — амбициозни планове могат да изчакат до утре.",
-    "Емоционалният фон е по-чувствителен днес — бъди по-мек към себе си и другите.",
-    "Небето благоприятства творчески и нестандартни решения пред строги правила.",
-    "Скрити детайли излизат наяве днес — добър момент за прозрение, не за прибързани изводи.",
-    "Ден на неочаквани съвпадения — обръщай внимание на малки знаци около теб."
-  ]
+  "ui": {
+    "bg": {
+      "eyebrow": "Личен Оракул",
+      "title": "Дневен Оракул",
+      "intro": "Избери своя зодиакален знак, за да получаваш всеки ден таро карта, хороскоп и астро прогноза, съобразени с теб.",
+      "changeSign": "смени знака",
+      "cardOfDay": "Карта на деня",
+      "cardHint": "докосни картата, за да я разкриеш",
+      "upright": "изправена",
+      "reversed": "обърната",
+      "horoscopeTitle": "✧ Хороскоп за деня",
+      "astroTitle": "☾ Астро прогноза",
+      "historyToggle": "последни дни",
+      "historyEmpty": "все още няма записи",
+      "footer": "За вдъхновение и размисъл — не заменя собствената ти преценка."
+    },
+    "en": {
+      "eyebrow": "Personal Oracle",
+      "title": "Daily Oracle",
+      "intro": "Choose your zodiac sign to receive a tarot card, a horoscope, and an astro forecast every day, tuned to you.",
+      "changeSign": "change sign",
+      "cardOfDay": "Card of the Day",
+      "cardHint": "touch the card to reveal it",
+      "upright": "upright",
+      "reversed": "reversed",
+      "horoscopeTitle": "✧ Today's Horoscope",
+      "astroTitle": "☾ Astro Forecast",
+      "historyToggle": "recent days",
+      "historyEmpty": "no entries yet",
+      "footer": "For inspiration and reflection — not a substitute for your own judgment."
+    },
+    "fr": {
+      "eyebrow": "Oracle Personnel",
+      "title": "Oracle du Jour",
+      "intro": "Choisis ton signe du zodiaque pour recevoir chaque jour une carte de tarot, un horoscope et une prévision astrale, adaptés à toi.",
+      "changeSign": "changer de signe",
+      "cardOfDay": "Carte du Jour",
+      "cardHint": "touche la carte pour la révéler",
+      "upright": "à l'endroit",
+      "reversed": "renversée",
+      "horoscopeTitle": "✧ Horoscope du Jour",
+      "astroTitle": "☾ Prévision Astrale",
+      "historyToggle": "derniers jours",
+      "historyEmpty": "aucune entrée pour le moment",
+      "footer": "Pour l'inspiration et la réflexion — ne remplace pas ton propre jugement."
+    }
+  },
+
+  "moonPhaseNames": {
+    "bg": ["Новолуние","Растяща луна (сърп)","Първа четвърт","Растяща луна (изпъкнала)","Пълнолуние","Намаляваща луна (изпъкнала)","Последна четвърт","Намаляваща луна (сърп)"],
+    "en": ["New Moon","Waxing Crescent","First Quarter","Waxing Gibbous","Full Moon","Waning Gibbous","Last Quarter","Waning Crescent"],
+    "fr": ["Nouvelle Lune","Premier Croissant","Premier Quartier","Lune Gibbeuse Croissante","Pleine Lune","Lune Gibbeuse Décroissante","Dernier Quartier","Dernier Croissant"]
+  },
+
+  "signs": {
+    "bg": [
+      {"id":"aries","name":"Овен","glyph":"♈","dates":"21.03–19.04"},
+      {"id":"taurus","name":"Телец","glyph":"♉","dates":"20.04–20.05"},
+      {"id":"gemini","name":"Близнаци","glyph":"♊","dates":"21.05–20.06"},
+      {"id":"cancer","name":"Рак","glyph":"♋","dates":"21.06–22.07"},
+      {"id":"leo","name":"Лъв","glyph":"♌","dates":"23.07–22.08"},
+      {"id":"virgo","name":"Дева","glyph":"♍","dates":"23.08–22.09"},
+      {"id":"libra","name":"Везни","glyph":"♎","dates":"23.09–22.10"},
+      {"id":"scorpio","name":"Скорпион","glyph":"♏","dates":"23.10–21.11"},
+      {"id":"sagittarius","name":"Стрелец","glyph":"♐","dates":"22.11–21.12"},
+      {"id":"capricorn","name":"Козирог","glyph":"♑","dates":"22.12–19.01"},
+      {"id":"aquarius","name":"Водолей","glyph":"♒","dates":"20.01–18.02"},
+      {"id":"pisces","name":"Риби","glyph":"♓","dates":"19.02–20.03"}
+    ],
+    "en": [
+      {"id":"aries","name":"Aries","glyph":"♈","dates":"Mar 21–Apr 19"},
+      {"id":"taurus","name":"Taurus","glyph":"♉","dates":"Apr 20–May 20"},
+      {"id":"gemini","name":"Gemini","glyph":"♊","dates":"May 21–Jun 20"},
+      {"id":"cancer","name":"Cancer","glyph":"♋","dates":"Jun 21–Jul 22"},
+      {"id":"leo","name":"Leo","glyph":"♌","dates":"Jul 23–Aug 22"},
+      {"id":"virgo","name":"Virgo","glyph":"♍","dates":"Aug 23–Sep 22"},
+      {"id":"libra","name":"Libra","glyph":"♎","dates":"Sep 23–Oct 22"},
+      {"id":"scorpio","name":"Scorpio","glyph":"♏","dates":"Oct 23–Nov 21"},
+      {"id":"sagittarius","name":"Sagittarius","glyph":"♐","dates":"Nov 22–Dec 21"},
+      {"id":"capricorn","name":"Capricorn","glyph":"♑","dates":"Dec 22–Jan 19"},
+      {"id":"aquarius","name":"Aquarius","glyph":"♒","dates":"Jan 20–Feb 18"},
+      {"id":"pisces","name":"Pisces","glyph":"♓","dates":"Feb 19–Mar 20"}
+    ],
+    "fr": [
+      {"id":"aries","name":"Bélier","glyph":"♈","dates":"21.03–19.04"},
+      {"id":"taurus","name":"Taureau","glyph":"♉","dates":"20.04–20.05"},
+      {"id":"gemini","name":"Gémeaux","glyph":"♊","dates":"21.05–20.06"},
+      {"id":"cancer","name":"Cancer","glyph":"♋","dates":"21.06–22.07"},
+      {"id":"leo","name":"Lion","glyph":"♌","dates":"23.07–22.08"},
+      {"id":"virgo","name":"Vierge","glyph":"♍","dates":"23.08–22.09"},
+      {"id":"libra","name":"Balance","glyph":"♎","dates":"23.09–22.10"},
+      {"id":"scorpio","name":"Scorpion","glyph":"♏","dates":"23.10–21.11"},
+      {"id":"sagittarius","name":"Sagittaire","glyph":"♐","dates":"22.11–21.12"},
+      {"id":"capricorn","name":"Capricorne","glyph":"♑","dates":"22.12–19.01"},
+      {"id":"aquarius","name":"Verseau","glyph":"♒","dates":"20.01–18.02"},
+      {"id":"pisces","name":"Poissons","glyph":"♓","dates":"19.02–20.03"}
+    ]
+  },
+
+  "cards": {
+    "bg": [
+      {"name":"Глупакът","glyph":"🃏","up":"Ново начало и лекота на духа — довери се на първата стъпка, дори без пълна карта на пътя.","rev":"Прибързаност или страх от риска. Спри и провери почвата, преди да скочиш."},
+      {"name":"Магьосникът","glyph":"🪄","up":"Имаш всички средства, от които се нуждаеш. Време е да превърнеш намерението в действие.","rev":"Разпиляна енергия или несигурност в собствените способности. Събери фокуса си."},
+      {"name":"Върховната жрица","glyph":"🌙","up":"Слушай интуицията си повече от логиката днес — отговорът вече е в теб.","rev":"Игнорираш вътрешния си глас. Намери тишина, за да го чуеш отново."},
+      {"name":"Императрицата","glyph":"🌿","up":"Изобилие, грижа и творчество. Денят подкрепя всичко, което отглеждаш — идея, връзка, проект.","rev":"Пренебрегнати нужди — твои или на някой близък. Намери баланс между даване и получаване."},
+      {"name":"Императорът","glyph":"👑","up":"Структура и дисциплина носят резултат. Поеми контрол с увереност, но без твърдост.","rev":"Прекалена нужда от контрол създава напрежение. Отпусни хватката леко."},
+      {"name":"Йерофантът","glyph":"📜","up":"Традиция, съвет от опитен човек или ясни правила ще ти помогнат да напреднеш.","rev":"Времето е да поставиш под въпрос утвърден начин на мислене, който вече не ти служи."},
+      {"name":"Влюбените","glyph":"💫","up":"Избор от сърце, хармония във връзка или съюз на идеи. Довери се на връзката.","rev":"Разминаване на ценности или трудно решение. Погледни какво наистина искаш."},
+      {"name":"Колесницата","glyph":"🏹","up":"Воля и насока — движиш се напред с решителност, дори през препятствия.","rev":"Липса на посока или вътрешен конфликт спъва напредъка. Изясни целта първо."},
+      {"name":"Силата","glyph":"🦁","up":"Мека, но устойчива сила. Търпението и състраданието побеждават грубата принуда.","rev":"Съмнение в себе си или изчерпана енергия. Бъди по-нежен към себе си днес."},
+      {"name":"Отшелникът","glyph":"🕯️","up":"Нужда от уединение и размисъл. Отговорите идват отвътре, не отвън.","rev":"Изолация, която вече тежи. Време е да потърсиш връзка с другите."},
+      {"name":"Колелото на съдбата","glyph":"☸️","up":"Промяна е на прага — обстоятелствата се обръщат в твоя полза.","rev":"Съпротива срещу неизбежна промяна. Приеми потока вместо да го спираш."},
+      {"name":"Справедливостта","glyph":"⚖️","up":"Истина, баланс и справедливо решение. Действията ти днес имат ясни последствия.","rev":"Нечестност или дисбаланс, който трябва да се коригира — включително спрямо себе си."},
+      {"name":"Обесеният","glyph":"🌀","up":"Нова перспектива идва чрез пауза. Понякога напредъкът означава да изчакаш.","rev":"Излишно жертвоприношение или чувство на застой. Провери дали паузата все още служи."},
+      {"name":"Смъртта","glyph":"🦋","up":"Край на един етап, за да започне следващият. Пусни онова, което вече не пасва.","rev":"Съпротива срещу неизбежен преход. Държиш се за нещо, което вече е приключило."},
+      {"name":"Умереността","glyph":"⚗️","up":"Баланс, търпение и умерена крачка водят до хармония.","rev":"Крайности или нетърпение нарушават равновесието. Забави темпото."},
+      {"name":"Дяволът","glyph":"⛓️","up":"Признай навик или привързаност, която те задържа — осъзнаването е първата свобода.","rev":"Освобождаване от ограничение, което вече не служи. Стъпка към лекота."},
+      {"name":"Кулата","glyph":"⚡","up":"Внезапна промяна разрушава фалшива структура, за да отвори място за истина.","rev":"Избягване на назряваща криза удължава напрежението. По-добре е да я посрещнеш."},
+      {"name":"Звездата","glyph":"⭐","up":"Надежда, вдъхновение и изцеление след трудност. Довери се на процеса.","rev":"Загубена вяра или откъснатост от мечтата. Върни се към нещо, което те вдъхновява."},
+      {"name":"Луната","glyph":"🌕","up":"Интуицията говори през символи и сънища. Не всичко трябва да е рационално обяснено днес.","rev":"Объркване или скрита тревога. Изчакай яснота, преди да действаш."},
+      {"name":"Слънцето","glyph":"☀️","up":"Радост, яснота и успех. Денят подкрепя откритост и споделяне.","rev":"Временно затъмнена радост — малка пречка, не крах. Тя ще премине."},
+      {"name":"Съдът","glyph":"🎺","up":"Пробуждане, преоценка и второ начало. Чуваш призив, който трудно се игнорира.","rev":"Самокритика, която пречи на прощаването. Дай си втори шанс."},
+      {"name":"Светът","glyph":"🌍","up":"Завършек на цикъл с чувство за цялост. Признай постигнатото, преди да продължиш напред.","rev":"Незавършена глава. Нещо все още иска финал, преди следващата стъпка."}
+    ],
+    "en": [
+      {"name":"The Fool","glyph":"🃏","up":"A new beginning and lightness of spirit — trust the first step, even without the full map.","rev":"Recklessness or fear of risk. Pause and check the ground before you leap."},
+      {"name":"The Magician","glyph":"🪄","up":"You already have every tool you need. Time to turn intention into action.","rev":"Scattered energy or self-doubt about your abilities. Gather your focus."},
+      {"name":"The High Priestess","glyph":"🌙","up":"Trust your intuition more than logic today — the answer is already within you.","rev":"You're ignoring your inner voice. Find some quiet to hear it again."},
+      {"name":"The Empress","glyph":"🌿","up":"Abundance, care, and creativity. The day supports whatever you're nurturing — an idea, a bond, a project.","rev":"Neglected needs — yours or someone close to you. Find the balance between giving and receiving."},
+      {"name":"The Emperor","glyph":"👑","up":"Structure and discipline pay off. Take charge with confidence, without rigidity.","rev":"Too much need for control creates tension. Loosen your grip a little."},
+      {"name":"The Hierophant","glyph":"📜","up":"Tradition, advice from someone experienced, or clear rules will help you move forward.","rev":"Time to question an established way of thinking that no longer serves you."},
+      {"name":"The Lovers","glyph":"💫","up":"A choice from the heart, harmony in a relationship, or a union of ideas. Trust the connection.","rev":"A mismatch of values or a hard decision. Look at what you truly want."},
+      {"name":"The Chariot","glyph":"🏹","up":"Will and direction — you move forward with determination, even through obstacles.","rev":"Lack of direction or inner conflict is stalling progress. Clarify the goal first."},
+      {"name":"Strength","glyph":"🦁","up":"A gentle but steady power. Patience and compassion win over brute force.","rev":"Self-doubt or depleted energy. Be gentler with yourself today."},
+      {"name":"The Hermit","glyph":"🕯️","up":"A need for solitude and reflection. The answers come from within, not from outside.","rev":"Isolation that's now weighing on you. Time to reach out and reconnect."},
+      {"name":"Wheel of Fortune","glyph":"☸️","up":"Change is at the threshold — circumstances are turning in your favor.","rev":"Resistance to inevitable change. Accept the flow instead of blocking it."},
+      {"name":"Justice","glyph":"⚖️","up":"Truth, balance, and a fair decision. Your actions today have clear consequences.","rev":"Dishonesty or an imbalance that needs correcting — including toward yourself."},
+      {"name":"The Hanged Man","glyph":"🌀","up":"A new perspective arrives through pause. Sometimes progress means waiting.","rev":"Unnecessary sacrifice or a feeling of stagnation. Check if the pause still serves you."},
+      {"name":"Death","glyph":"🦋","up":"The end of one phase so the next can begin. Let go of what no longer fits.","rev":"Resistance to an inevitable transition. You're holding on to something already over."},
+      {"name":"Temperance","glyph":"⚗️","up":"Balance, patience, and a moderate pace lead to harmony.","rev":"Extremes or impatience are throwing off your balance. Slow the pace."},
+      {"name":"The Devil","glyph":"⛓️","up":"Acknowledge a habit or attachment that's holding you back — awareness is the first freedom.","rev":"Freeing yourself from a limitation that no longer serves you. A step toward lightness."},
+      {"name":"The Tower","glyph":"⚡","up":"Sudden change breaks down a false structure to make room for truth.","rev":"Avoiding a brewing crisis only prolongs the tension. Better to face it."},
+      {"name":"The Star","glyph":"⭐","up":"Hope, inspiration, and healing after hardship. Trust the process.","rev":"Lost faith or disconnection from your dream. Return to something that inspires you."},
+      {"name":"The Moon","glyph":"🌕","up":"Intuition speaks through symbols and dreams. Not everything needs to be rationally explained today.","rev":"Confusion or hidden anxiety. Wait for clarity before acting."},
+      {"name":"The Sun","glyph":"☀️","up":"Joy, clarity, and success. The day favors openness and sharing.","rev":"Temporarily dimmed joy — a small setback, not a collapse. It will pass."},
+      {"name":"Judgement","glyph":"🎺","up":"Awakening, reassessment, and a second beginning. You hear a call that's hard to ignore.","rev":"Self-criticism that's blocking forgiveness. Give yourself a second chance."},
+      {"name":"The World","glyph":"🌍","up":"The completion of a cycle with a sense of wholeness. Acknowledge what you achieved before moving on.","rev":"An unfinished chapter. Something still wants closure before the next step."}
+    ],
+    "fr": [
+      {"name":"Le Fou","glyph":"🃏","up":"Un nouveau départ et une légèreté d'esprit — fais confiance au premier pas, même sans la carte complète.","rev":"Précipitation ou peur du risque. Arrête-toi et vérifie le terrain avant de sauter."},
+      {"name":"Le Magicien","glyph":"🪄","up":"Tu as déjà tous les outils dont tu as besoin. Il est temps de transformer l'intention en action.","rev":"Énergie dispersée ou doute sur tes propres capacités. Rassemble ton attention."},
+      {"name":"La Grande Prêtresse","glyph":"🌙","up":"Écoute ton intuition plus que la logique aujourd'hui — la réponse est déjà en toi.","rev":"Tu ignores ta voix intérieure. Trouve un moment de calme pour l'entendre à nouveau."},
+      {"name":"L'Impératrice","glyph":"🌿","up":"Abondance, attention et créativité. La journée soutient tout ce que tu fais grandir — une idée, un lien, un projet.","rev":"Besoins négligés — les tiens ou ceux d'un proche. Trouve l'équilibre entre donner et recevoir."},
+      {"name":"L'Empereur","glyph":"👑","up":"Structure et discipline portent leurs fruits. Prends les commandes avec assurance, sans rigidité.","rev":"Un besoin excessif de contrôle crée des tensions. Desserre un peu l'étreinte."},
+      {"name":"Le Hiérophante","glyph":"📜","up":"La tradition, le conseil d'une personne expérimentée ou des règles claires t'aideront à avancer.","rev":"C'est le moment de remettre en question une façon de penser établie qui ne te sert plus."},
+      {"name":"Les Amoureux","glyph":"💫","up":"Un choix venu du cœur, l'harmonie dans une relation ou une union d'idées. Fais confiance au lien.","rev":"Un décalage de valeurs ou une décision difficile. Regarde ce que tu veux vraiment."},
+      {"name":"Le Chariot","glyph":"🏹","up":"Volonté et direction — tu avances avec détermination, même à travers les obstacles.","rev":"Un manque de direction ou un conflit intérieur freine l'avancée. Clarifie d'abord l'objectif."},
+      {"name":"La Force","glyph":"🦁","up":"Une force douce mais constante. La patience et la compassion l'emportent sur la contrainte brute.","rev":"Doute de toi-même ou énergie épuisée. Sois plus indulgent envers toi-même aujourd'hui."},
+      {"name":"L'Ermite","glyph":"🕯️","up":"Besoin de solitude et de réflexion. Les réponses viennent de l'intérieur, pas de l'extérieur.","rev":"Un isolement qui pèse désormais. Il est temps de renouer le contact avec les autres."},
+      {"name":"La Roue de Fortune","glyph":"☸️","up":"Le changement est à ta porte — les circonstances tournent en ta faveur.","rev":"Résistance à un changement inévitable. Accepte le mouvement au lieu de le bloquer."},
+      {"name":"La Justice","glyph":"⚖️","up":"Vérité, équilibre et décision juste. Tes actions d'aujourd'hui ont des conséquences claires.","rev":"Malhonnêteté ou déséquilibre à corriger — y compris envers toi-même."},
+      {"name":"Le Pendu","glyph":"🌀","up":"Une nouvelle perspective arrive grâce à une pause. Parfois avancer signifie attendre.","rev":"Sacrifice inutile ou sentiment de stagnation. Vérifie si cette pause te sert encore."},
+      {"name":"La Mort","glyph":"🦋","up":"La fin d'une étape pour que la suivante commence. Laisse partir ce qui ne te correspond plus.","rev":"Résistance à une transition inévitable. Tu t'accroches à quelque chose déjà terminé."},
+      {"name":"Tempérance","glyph":"⚗️","up":"Équilibre, patience et un rythme mesuré mènent à l'harmonie.","rev":"Excès ou impatience déséquilibrent tout. Ralentis le rythme."},
+      {"name":"Le Diable","glyph":"⛓️","up":"Reconnais une habitude ou un attachement qui te retient — la prise de conscience est la première liberté.","rev":"Te libérer d'une limite qui ne te sert plus. Un pas vers la légèreté."},
+      {"name":"La Tour","glyph":"⚡","up":"Un changement soudain détruit une fausse structure pour laisser place à la vérité.","rev":"Éviter une crise qui couve ne fait que prolonger la tension. Mieux vaut l'affronter."},
+      {"name":"L'Étoile","glyph":"⭐","up":"Espoir, inspiration et guérison après une épreuve. Fais confiance au processus.","rev":"Foi perdue ou déconnexion de ton rêve. Reviens vers ce qui t'inspire."},
+      {"name":"La Lune","glyph":"🌕","up":"L'intuition parle à travers symboles et rêves. Tout n'a pas besoin d'être expliqué rationnellement aujourd'hui.","rev":"Confusion ou anxiété cachée. Attends d'y voir clair avant d'agir."},
+      {"name":"Le Soleil","glyph":"☀️","up":"Joie, clarté et réussite. La journée favorise l'ouverture et le partage.","rev":"Joie temporairement voilée — un petit obstacle, pas un effondrement. Cela passera."},
+      {"name":"Le Jugement","glyph":"🎺","up":"Réveil, réévaluation et second départ. Tu entends un appel difficile à ignorer.","rev":"Autocritique qui empêche le pardon. Accorde-toi une seconde chance."},
+      {"name":"Le Monde","glyph":"🌍","up":"L'achèvement d'un cycle avec un sentiment de plénitude. Reconnais ce que tu as accompli avant d'avancer.","rev":"Un chapitre inachevé. Quelque chose demande encore une conclusion avant la suite."}
+    ]
+  },
+
+  "horoscopeLove": {
+    "bg": [
+      "В любовта днес е ден за откровен разговор, дори ако избягваш темата от известно време.",
+      "Топлината, която търсиш от другите, започва с това как говориш на себе си днес.",
+      "Малък жест на внимание днес ще тежи повече от големи думи.",
+      "Свободното време с близък човек носи повече яснота от всякакъв анализ.",
+      "Днес е подходящ момент да поставиш граница в отношенията си — с мекота, но твърдо.",
+      "Стар въпрос в сърдечните ти дела намира неочакван отговор днес.",
+      "Слушай повече, отколкото говориш — днес връзките ти го възнаграждават.",
+      "Позволи си да приемеш грижа, вместо винаги да я даваш."
+    ],
+    "en": [
+      "In love, today calls for an honest conversation, even if you've been avoiding it.",
+      "The warmth you're looking for from others starts with how you speak to yourself today.",
+      "A small gesture of attention today will matter more than big words.",
+      "Unstructured time with someone close brings more clarity than any amount of analysis.",
+      "Today is a good moment to set a boundary in a relationship — gently, but firmly.",
+      "An old question in your love life finds an unexpected answer today.",
+      "Listen more than you speak today — your relationships will reward it.",
+      "Let yourself receive care today, instead of always giving it."
+    ],
+    "fr": [
+      "En amour, aujourd'hui est propice à une conversation sincère, même si tu l'évites depuis un moment.",
+      "La chaleur que tu cherches chez les autres commence par la façon dont tu te parles aujourd'hui.",
+      "Un petit geste d'attention pèsera aujourd'hui plus que de grands mots.",
+      "Du temps libre avec un proche apporte plus de clarté que n'importe quelle analyse.",
+      "C'est un bon moment pour poser une limite dans une relation — avec douceur, mais fermeté.",
+      "Une vieille question sentimentale trouve aujourd'hui une réponse inattendue.",
+      "Écoute plus que tu ne parles aujourd'hui — tes relations te le rendront.",
+      "Autorise-toi à recevoir de l'attention, au lieu d'en donner sans cesse."
+    ]
+  },
+  "horoscopeWork": {
+    "bg": [
+      "В работата днес приоритизирай едно нещо, вместо да разпръскваш енергия по много посоки.",
+      "Идея, която пазиш за себе си, заслужава да бъде споделена днес.",
+      "Финансов въпрос иска твоето внимание — дори кратък преглед носи спокойствие.",
+      "Сътрудничество върви по-добре от самостоятелна битка днес.",
+      "Малка организационна крачка днес спестява голямо главоболие утре.",
+      "Признание за положен труд идва, макар да не е в очакваната форма.",
+      "Пауза от работа за момент презарежда повече, отколкото форсирано темпо.",
+      "Днес е добър ден да кажеш „не“ на задача, която не е твоя отговорност."
+    ],
+    "en": [
+      "At work today, prioritize one thing instead of spreading your energy in many directions.",
+      "An idea you've been keeping to yourself deserves to be shared today.",
+      "A financial matter needs your attention — even a quick review brings peace of mind.",
+      "Collaboration works better than a solo fight today.",
+      "A small organizational step today saves a big headache tomorrow.",
+      "Recognition for effort put in arrives, even if not in the form you expected.",
+      "A short break from work recharges you more than a forced pace.",
+      "Today is a good day to say \"no\" to a task that isn't your responsibility."
+    ],
+    "fr": [
+      "Au travail aujourd'hui, priorise une seule chose plutôt que de disperser ton énergie.",
+      "Une idée que tu gardes pour toi mérite d'être partagée aujourd'hui.",
+      "Une question financière demande ton attention — même un rapide coup d'œil apporte de la tranquillité.",
+      "La collaboration fonctionne mieux qu'un combat en solitaire aujourd'hui.",
+      "Un petit pas d'organisation aujourd'hui évite un gros mal de tête demain.",
+      "Une reconnaissance pour un effort fourni arrive, même sous une forme inattendue.",
+      "Une pause dans le travail recharge plus qu'un rythme forcé.",
+      "Aujourd'hui est un bon jour pour dire « non » à une tâche qui n'est pas de ta responsabilité."
+    ]
+  },
+  "horoscopeEnergy": {
+    "bg": [
+      "Енергията ти днес е по-вътрешна — не насилвай темпо, което не е твоето.",
+      "Тялото иска движение днес, дори кратка разходка променя настроението.",
+      "Почивката днес не е загубено време, а инвестиция в утрешния ден.",
+      "Усещаш прилив на вдъхновение следобед — запази пространство за него.",
+      "Дребен физически дискомфорт е сигнал да забавиш темпото за малко.",
+      "Днес интуицията ти е по-остра от обичайно — обръщай внимание на първите усещания.",
+      "Настроението се движи вълнообразно днес — позволи си да не си еднакъв през целия ден.",
+      "Творческа енергия е висока — добър ден за нещо с ръцете или въображението."
+    ],
+    "en": [
+      "Your energy today is more inward-facing — don't force a pace that isn't yours.",
+      "The body wants movement today, even a short walk shifts your mood.",
+      "Rest today is not wasted time, but an investment in tomorrow.",
+      "You feel a surge of inspiration in the afternoon — leave room for it.",
+      "A small physical discomfort is a sign to slow the pace for a bit.",
+      "Your intuition is sharper than usual today — pay attention to first impressions.",
+      "Your mood moves in waves today — allow yourself not to be the same all day.",
+      "Creative energy is high — a good day for something made with hands or imagination."
+    ],
+    "fr": [
+      "Ton énergie aujourd'hui est plus tournée vers l'intérieur — ne force pas un rythme qui n'est pas le tien.",
+      "Le corps a besoin de mouvement aujourd'hui, même une courte marche change l'humeur.",
+      "Le repos aujourd'hui n'est pas du temps perdu, mais un investissement pour demain.",
+      "Tu ressens un élan d'inspiration l'après-midi — garde de la place pour lui.",
+      "Un petit inconfort physique est un signe de ralentir un peu le rythme.",
+      "Ton intuition est plus vive que d'habitude aujourd'hui — prête attention aux premières impressions.",
+      "Ton humeur avance par vagues aujourd'hui — autorise-toi à ne pas être le/la même toute la journée.",
+      "L'énergie créative est forte — une bonne journée pour quelque chose fait avec les mains ou l'imagination."
+    ]
+  },
+  "astroGlobal": {
+    "bg": [
+      "Небето подкрепя завършването на недовършени неща повече, отколкото започването на нови.",
+      "Ден с по-бавен ритъм — планетарните влияния благоприятстват размисъл пред действие.",
+      "Комуникацията е под добра звезда днес — разговор, който отлагаш, вероятно ще мине леко.",
+      "Ден за практични крачки — амбициозни планове могат да изчакат до утре.",
+      "Емоционалният фон е по-чувствителен днес — бъди по-мек към себе си и другите.",
+      "Небето благоприятства творчески и нестандартни решения пред строги правила.",
+      "Скрити детайли излизат наяве днес — добър момент за прозрение, не за прибързани изводи.",
+      "Ден на неочаквани съвпадения — обръщай внимание на малки знаци около теб."
+    ],
+    "en": [
+      "The sky favors finishing unfinished things more than starting new ones.",
+      "A slower-paced day — planetary influences favor reflection over action.",
+      "Communication is under a good star today — a conversation you've been postponing will likely go smoothly.",
+      "A day for practical steps — ambitious plans can wait until tomorrow.",
+      "The emotional tone is more sensitive today — be gentler with yourself and others.",
+      "The sky favors creative, unconventional solutions over strict rules.",
+      "Hidden details surface today — a good moment for insight, not for hasty conclusions.",
+      "A day of unexpected coincidences — pay attention to small signs around you."
+    ],
+    "fr": [
+      "Le ciel favorise l'achèvement des choses inachevées plus que le démarrage de nouvelles.",
+      "Une journée au rythme plus lent — les influences planétaires favorisent la réflexion plutôt que l'action.",
+      "La communication est sous une bonne étoile aujourd'hui — une conversation que tu repousses devrait bien se passer.",
+      "Une journée pour des pas pratiques — les projets ambitieux peuvent attendre demain.",
+      "Le climat émotionnel est plus sensible aujourd'hui — sois plus doux envers toi-même et les autres.",
+      "Le ciel favorise les solutions créatives et non conventionnelles plutôt que les règles strictes.",
+      "Des détails cachés refont surface aujourd'hui — bon moment pour la prise de conscience, pas pour des conclusions hâtives.",
+      "Une journée de coïncidences inattendues — prête attention aux petits signes autour de toi."
+    ]
+  }
 }

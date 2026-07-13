@@ -31,6 +31,29 @@ body{
 
 .wrap{position:relative; z-index:1; max-width:920px; margin:0 auto; padding:48px 24px 80px;}
 
+.lang-switch{
+  display:flex; justify-content:center; gap:8px; margin-bottom:28px;
+}
+.lang-btn{
+  background:none;
+  border:1px solid var(--line);
+  color:var(--lavender);
+  font-family:'Space Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  padding:6px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.lang-btn:hover{ border-color:var(--gold); color:var(--gold-bright); }
+.lang-btn.active{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:var(--bg-deep);
+  font-weight:700;
+}
+
 .eyebrow{
   font-family:'Space Mono', monospace;
   font-size:12px;

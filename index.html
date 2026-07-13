@@ -11,24 +11,26 @@
 <div class="stars" id="stars"></div>
 
 <div class="wrap">
-  <div class="eyebrow">Личен Оракул</div>
-  <h1>Дневен Оракул</h1>
+  <div class="lang-switch" id="langSwitch"></div>
+
+  <div class="eyebrow" id="eyebrow"></div>
+  <h1 id="title"></h1>
   <div class="date-line" id="dateLine"></div>
 
   <div id="onboarding">
-    <p class="wheel-intro">Избери своя зодиакален знак, за да получаваш всеки ден таро карта, хороскоп и астро прогноза, съобразени с теб.</p>
+    <p class="wheel-intro" id="wheelIntro"></p>
     <div class="zodiac-grid" id="zodiacGrid"></div>
   </div>
 
   <div id="dashboard">
     <div class="profile-row">
       <span id="profileLabel"></span>
-      <button class="change-sign" id="changeSign">смени знака</button>
+      <button class="change-sign" id="changeSign"></button>
     </div>
 
     <div class="panels">
       <div class="tarot-panel">
-        <div class="section-label">Карта на деня</div>
+        <div class="section-label" id="cardOfDayLabel"></div>
         <div class="card-stage" id="cardStage">
           <div class="card-inner" id="cardInner">
             <div class="card-face card-back">
@@ -43,17 +45,17 @@
             </div>
           </div>
         </div>
-        <div class="card-hint" id="cardHint">докосни картата, за да я разкриеш</div>
+        <div class="card-hint" id="cardHint"></div>
         <div class="card-meaning" id="cardMeaning" style="display:none;"></div>
       </div>
 
       <div class="text-panels">
         <div class="text-card">
-          <h3>✧ Хороскоп за деня</h3>
+          <h3 id="horoscopeHeading"></h3>
           <p id="horoscopeText"></p>
         </div>
         <div class="text-card">
-          <h3>☾ Астро прогноза</h3>
+          <h3 id="astroHeading"></h3>
           <p id="astroText"></p>
           <div class="moon-line">
             <span id="moonPhaseLabel"></span>
@@ -64,12 +66,12 @@
     </div>
 
     <div class="history">
-      <button class="history-toggle" id="historyToggle">последни дни</button>
+      <button class="history-toggle" id="historyToggle"></button>
       <div class="history-list" id="historyList"></div>
     </div>
   </div>
 
-  <footer>За вдъхновение и размисъл — не заменя собствената ти преценка.</footer>
+  <footer id="footerText"></footer>
 </div>
 
 <script src="script.js"></script>
