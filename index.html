@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дневен Оракул</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="wrap">
+  <div class="eyebrow">Личен Оракул</div>
+  <h1>Дневен Оракул</h1>
+  <div class="date-line" id="dateLine"></div>
+
+  <div id="onboarding">
+    <p class="wheel-intro">Избери своя зодиакален знак, за да получаваш всеки ден таро карта, хороскоп и астро прогноза, съобразени с теб.</p>
+    <div class="zodiac-grid" id="zodiacGrid"></div>
+  </div>
+
+  <div id="dashboard">
+    <div class="profile-row">
+      <span id="profileLabel"></span>
+      <button class="change-sign" id="changeSign">смени знака</button>
+    </div>
+
+    <div class="panels">
+      <div class="tarot-panel">
+        <div class="section-label">Карта на деня</div>
+        <div class="card-stage" id="cardStage">
+          <div class="card-inner" id="cardInner">
+            <div class="card-face card-back">
+              <div class="card-back-symbol">✦</div>
+            </div>
+            <div class="card-face card-front" id="cardFront">
+              <div class="card-front-inner">
+                <div class="card-glyph" id="cardGlyph"></div>
+                <div class="card-name" id="cardName"></div>
+                <div class="card-orientation" id="cardOrientation"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-hint" id="cardHint">докосни картата, за да я разкриеш</div>
+        <div class="card-meaning" id="cardMeaning" style="display:none;"></div>
+      </div>
+
+      <div class="text-panels">
+        <div class="text-card">
+          <h3>✧ Хороскоп за деня</h3>
+          <p id="horoscopeText"></p>
+        </div>
+        <div class="text-card">
+          <h3>☾ Астро прогноза</h3>
+          <p id="astroText"></p>
+          <div class="moon-line">
+            <span id="moonPhaseLabel"></span>
+            <span id="moonEmoji"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history">
+      <button class="history-toggle" id="historyToggle">последни дни</button>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </div>
+
+  <footer>За вдъхновение и размисъл — не заменя собствената ти преценка.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
