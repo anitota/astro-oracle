@@ -102,7 +102,58 @@ function applyUiText(){
   document.getElementById('astroHeading').textContent = t.astroTitle;
   document.getElementById('historyToggle').textContent = t.historyToggle;
   document.getElementById('footerText').textContent = t.footer;
+  document.getElementById('crystalHeading').textContent = t.crystalTitle;
+  document.getElementById('ritualHeading').textContent = t.ritualTitle;
   document.documentElement.lang = currentLang;
+}
+
+function renderFeatureMenu(){
+  const t = DATA.ui[currentLang];
+  const menu = document.getElementById('featureMenu');
+  menu.innerHTML = '';
+  const items = [
+    {icon:'🌙', label:t.menuDraw, action:()=>goToSection('cardStage')},
+    {icon:'♈', label:t.menuCrystal, action:()=>goToSection('crystalCard')},
+    {icon:'🌕', label:t.menuMoon, action:toggleMoonReveal},
+    {icon:'✨', label:t.menuRitual, action:()=>goToSection('ritualCard')}
+  ];
+  items.forEach(it=>{
+    const btn = document.createElement('button');
+    btn.className = 'feature-btn';
+    btn.innerHTML = `<span class="feature-icon">${it.icon}</span><span class="feature-label">${it.label}</span>`;
+    btn.addEventListener('click', it.action);
+    menu.appendChild(btn);
+  });
+}
+
+function goToSection(elId){
+  const profile = getProfile();
+  if(!profile || !profile.signId){
+    document.getElementById('onboarding').scrollIntoView({behavior:'smooth', block:'start'});
+    return;
+  }
+  const el = document.getElementById(elId);
+  if(el){ el.scrollIntoView({behavior:'smooth', block:'center'}); }
+}
+
+function toggleMoonReveal(){
+  const box = document.getElementById('moonReveal');
+  const t = DATA.ui[currentLang];
+  if(box.style.display === 'block'){
+    box.style.display = 'none';
+    return;
+  }
+  const dateObj = new Date();
+  const idx = moonPhaseIndex(dateObj);
+  box.innerHTML = `
+    <button class="moon-close" id="moonCloseBtn">${t.moonRevealClose}</button>
+    <span class="moon-big">${MOON_EMOJIS[idx]}</span>
+    <div class="moon-name">${DATA.moonPhaseNames[currentLang][idx]}</div>
+    <div class="moon-date">${formatDate(dateObj, currentLang)}</div>
+  `;
+  box.style.display = 'block';
+  document.getElementById('moonCloseBtn').addEventListener('click', ()=>{ box.style.display = 'none'; });
+  box.scrollIntoView({behavior:'smooth', block:'center'});
 }
 
 function renderZodiacGrid(){
@@ -178,8 +229,15 @@ function showDashboard(signId){
   const astro = DATA.astroGlobal[currentLang][hashStr(dKey+'|astro') % DATA.astroGlobal[currentLang].length];
   document.getElementById('astroText').textContent = astro;
   const moonIdx = moonPhaseIndex(dateObj);
-  document.getElementById('moonPhaseLabel').textContent = DATA.moonPhaseNames[currentLang][moonIdx];
-  document.getElementById('moonEmoji').textContent = MOON_EMOJIS[moonIdx];
+  document.getElementById('moonPhaseLabelDash').textContent = DATA.moonPhaseNames[currentLang][moonIdx];
+  document.getElementById('moonEmojiDash').textContent = MOON_EMOJIS[moonIdx];
+
+  const crystal = DATA.crystals[currentLang][signIdx];
+  document.getElementById('crystalStone').textContent = crystal.stone;
+  document.getElementById('crystalDesc').textContent = crystal.desc;
+
+  const ritual = DATA.rituals[currentLang][hashStr(dKey+'|ritual|'+signId) % DATA.rituals[currentLang].length];
+  document.getElementById('ritualText').textContent = ritual;
 
   renderHistory(getHistory());
 }
@@ -221,6 +279,7 @@ function changeLang(lang){
   applyUiText();
   renderZodiacGrid();
   renderLangSwitch();
+  renderFeatureMenu();
   const profile = getProfile();
   if(profile && profile.signId){
     showDashboard(profile.signId);
@@ -236,6 +295,7 @@ function changeLang(lang){
   applyUiText();
   renderZodiacGrid();
   renderLangSwitch();
+  renderFeatureMenu();
 
   document.getElementById('changeSign').addEventListener('click', ()=>{
     document.getElementById('dashboard').style.display = 'none';

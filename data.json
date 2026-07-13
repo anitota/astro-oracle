@@ -13,7 +13,15 @@
       "astroTitle": "☾ Астро прогноза",
       "historyToggle": "последни дни",
       "historyEmpty": "все още няма записи",
-      "footer": "За вдъхновение и размисъл — не заменя собствената ти преценка."
+      "footer": "За вдъхновение и размисъл — не заменя собствената ти преценка.",
+      "menuDraw": "Изтегли дневната карта",
+      "menuCrystal": "Открий кристала на знака си",
+      "menuMoon": "Фаза на Луната днес",
+      "menuRitual": "Личен ритуал на деня",
+      "moonRevealClose": "затвори",
+      "crystalTitle": "💎 Кристал на знака",
+      "ritualTitle": "✨ Ритуал на деня",
+      "pickSignFirst": "Избери знак отдолу, за да видиш това"
     },
     "en": {
       "eyebrow": "Personal Oracle",
@@ -28,7 +36,15 @@
       "astroTitle": "☾ Astro Forecast",
       "historyToggle": "recent days",
       "historyEmpty": "no entries yet",
-      "footer": "For inspiration and reflection — not a substitute for your own judgment."
+      "footer": "For inspiration and reflection — not a substitute for your own judgment.",
+      "menuDraw": "Draw Today's Oracle",
+      "menuCrystal": "Find Your Zodiac Crystal",
+      "menuMoon": "Moon Phase Today",
+      "menuRitual": "Personal Ritual of the Day",
+      "moonRevealClose": "close",
+      "crystalTitle": "💎 Your Sign's Crystal",
+      "ritualTitle": "✨ Ritual of the Day",
+      "pickSignFirst": "Pick your sign below to see this"
     },
     "fr": {
       "eyebrow": "Oracle Personnel",
@@ -43,7 +59,15 @@
       "astroTitle": "☾ Prévision Astrale",
       "historyToggle": "derniers jours",
       "historyEmpty": "aucune entrée pour le moment",
-      "footer": "Pour l'inspiration et la réflexion — ne remplace pas ton propre jugement."
+      "footer": "Pour l'inspiration et la réflexion — ne remplace pas ton propre jugement.",
+      "menuDraw": "Tire l'Oracle du Jour",
+      "menuCrystal": "Découvre le Cristal de ton Signe",
+      "menuMoon": "Phase de la Lune Aujourd'hui",
+      "menuRitual": "Rituel Personnel du Jour",
+      "moonRevealClose": "fermer",
+      "crystalTitle": "💎 Cristal de ton Signe",
+      "ritualTitle": "✨ Rituel du Jour",
+      "pickSignFirst": "Choisis ton signe ci-dessous pour voir ceci"
     }
   },
 
@@ -95,6 +119,90 @@
       {"id":"capricorn","name":"Capricorne","glyph":"♑","dates":"22.12–19.01"},
       {"id":"aquarius","name":"Verseau","glyph":"♒","dates":"20.01–18.02"},
       {"id":"pisces","name":"Poissons","glyph":"♓","dates":"19.02–20.03"}
+    ]
+  },
+
+  "crystals": {
+    "bg": [
+      {"stone":"Карнеол","desc":"Носи смелост и жизнена искра — подхранва решителността на Овена."},
+      {"stone":"Розов кварц","desc":"Отваря сърцето за нежност и търпение — огледало на постоянството на Телеца."},
+      {"stone":"Цитрин","desc":"Разведрява ума и подпомага общуването — резонира с любопитството на Близнаци."},
+      {"stone":"Лунен камък","desc":"Успокоява емоциите и засилва интуицията — близък на чувствителността на Рак."},
+      {"stone":"Тигрово око","desc":"Дава увереност и топлина — подхранва естествената харизма на Лъв."},
+      {"stone":"Амазонит","desc":"Носи яснота и баланс — подкрепя практичността на Дева."},
+      {"stone":"Лазурит","desc":"Насърчава хармония и справедливост — отразява стремежа на Везни към равновесие."},
+      {"stone":"Обсидиан","desc":"Защитава и разкрива скрити истини — резонира с дълбочината на Скорпион."},
+      {"stone":"Тюркоаз","desc":"Носи късмет и разширява хоризонтите — пасва на духа на приключение у Стрелец."},
+      {"stone":"Гранат","desc":"Дава сила и постоянство — опора на дисциплината на Козирог."},
+      {"stone":"Аметист","desc":"Стимулира оригинални идеи и спокойствие на ума — близък на визионерството на Водолей."},
+      {"stone":"Аквамарин","desc":"Успокоява и отваря състраданието — течен като мечтателността на Риби."}
+    ],
+    "en": [
+      {"stone":"Carnelian","desc":"Brings courage and a spark of vitality — feeds Aries' determination."},
+      {"stone":"Rose Quartz","desc":"Opens the heart to gentleness and patience — mirrors Taurus' steadiness."},
+      {"stone":"Citrine","desc":"Lightens the mind and supports communication — resonates with Gemini's curiosity."},
+      {"stone":"Moonstone","desc":"Soothes emotions and sharpens intuition — close to Cancer's sensitivity."},
+      {"stone":"Tiger's Eye","desc":"Gives confidence and warmth — feeds Leo's natural charisma."},
+      {"stone":"Amazonite","desc":"Brings clarity and balance — supports Virgo's practicality."},
+      {"stone":"Lapis Lazuli","desc":"Encourages harmony and fairness — reflects Libra's pursuit of balance."},
+      {"stone":"Obsidian","desc":"Protects and reveals hidden truths — resonates with Scorpio's depth."},
+      {"stone":"Turquoise","desc":"Brings luck and expands horizons — matches Sagittarius' adventurous spirit."},
+      {"stone":"Garnet","desc":"Gives strength and endurance — a pillar for Capricorn's discipline."},
+      {"stone":"Amethyst","desc":"Sparks original ideas and calms the mind — close to Aquarius' vision."},
+      {"stone":"Aquamarine","desc":"Soothes and opens compassion — fluid like Pisces' dreaminess."}
+    ],
+    "fr": [
+      {"stone":"Cornaline","desc":"Apporte du courage et une étincelle de vitalité — nourrit la détermination du Bélier."},
+      {"stone":"Quartz Rose","desc":"Ouvre le cœur à la douceur et à la patience — reflète la constance du Taureau."},
+      {"stone":"Citrine","desc":"Allège l'esprit et soutient la communication — résonne avec la curiosité des Gémeaux."},
+      {"stone":"Pierre de Lune","desc":"Apaise les émotions et affine l'intuition — proche de la sensibilité du Cancer."},
+      {"stone":"Œil de Tigre","desc":"Donne confiance et chaleur — nourrit le charisme naturel du Lion."},
+      {"stone":"Amazonite","desc":"Apporte clarté et équilibre — soutient le sens pratique de la Vierge."},
+      {"stone":"Lapis-Lazuli","desc":"Encourage l'harmonie et la justice — reflète la quête d'équilibre de la Balance."},
+      {"stone":"Obsidienne","desc":"Protège et révèle les vérités cachées — résonne avec la profondeur du Scorpion."},
+      {"stone":"Turquoise","desc":"Apporte de la chance et élargit les horizons — s'accorde à l'esprit d'aventure du Sagittaire."},
+      {"stone":"Grenat","desc":"Donne force et endurance — un pilier pour la discipline du Capricorne."},
+      {"stone":"Améthyste","desc":"Stimule les idées originales et apaise l'esprit — proche de la vision du Verseau."},
+      {"stone":"Aigue-Marine","desc":"Apaise et ouvre à la compassion — fluide comme la rêverie des Poissons."}
+    ]
+  },
+
+  "rituals": {
+    "bg": [
+      "Запали свещ тази вечер и запиши три неща, за които си благодарен днес.",
+      "Прекарай 5 минути на дневна светлина сутринта, докато си поставяш намерение за деня.",
+      "Изпий чаша чай бавно, без телефон, и наблюдавай парата, докато се издига.",
+      "Подреди едно ъгълче от пространството си — външният ред носи вътрешен.",
+      "Напиши писмо до себе си от бъдещето и го прибери за по-късно.",
+      "Направи три дълбоки вдишвания, преди да отговориш на нещо, което те дразни днес.",
+      "Разходи се навън без конкретна цел — просто за да усетиш въздуха.",
+      "Изкажи на глас едно нещо, което цениш у себе си.",
+      "Изключи известията за час и забележи какво изниква в ума ти в тишина.",
+      "Дай на някого искрен комплимент днес — без причина, само защото го заслужава."
+    ],
+    "en": [
+      "Light a candle tonight and write down three things you're grateful for today.",
+      "Spend 5 minutes in daylight this morning while setting an intention for the day.",
+      "Drink a cup of tea slowly, without your phone, watching the steam rise.",
+      "Tidy one small corner of your space — outer order brings inner order.",
+      "Write a letter to your future self and put it away for later.",
+      "Take three deep breaths before responding to something that irritates you today.",
+      "Take a walk outside with no destination — just to feel the air.",
+      "Say out loud one thing you appreciate about yourself.",
+      "Turn off notifications for an hour and notice what surfaces in the quiet.",
+      "Give someone a sincere compliment today — for no reason, just because they deserve it."
+    ],
+    "fr": [
+      "Allume une bougie ce soir et écris trois choses pour lesquelles tu es reconnaissant·e aujourd'hui.",
+      "Passe 5 minutes à la lumière du jour ce matin en fixant une intention pour la journée.",
+      "Bois une tasse de thé lentement, sans téléphone, en regardant la vapeur monter.",
+      "Range un petit coin de ton espace — l'ordre extérieur apporte l'ordre intérieur.",
+      "Écris une lettre à ton futur toi et range-la pour plus tard.",
+      "Prends trois respirations profondes avant de répondre à quelque chose qui t'irrite aujourd'hui.",
+      "Fais une promenade sans destination — juste pour sentir l'air.",
+      "Dis à voix haute une chose que tu apprécies chez toi.",
+      "Coupe les notifications pendant une heure et observe ce qui émerge dans le calme.",
+      "Fais un compliment sincère à quelqu'un aujourd'hui — sans raison, juste parce qu'il le mérite."
     ]
   },
 
