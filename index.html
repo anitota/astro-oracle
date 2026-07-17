@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дневен Оракул</title>
+<meta property="og:title" content="ORACLE">
+<meta property="og:description" content="Draw your daily tarot card, horoscope and astro forecast.">
 <link rel="stylesheet" href="style.css">
 <script data-goatcounter="https://anitota-orakul.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -89,11 +91,11 @@
 
   <footer id="footerText"></footer>
   <div class="social-bar">
+    <button class="social-btn" id="shareBtn">
+      <span>⤴</span> <span id="shareText">Сподели</span>
+    </button>
     <button class="social-btn" id="likeBtn">
       <span id="likeIcon">♡</span> <span id="likeText">Харесай</span> <span class="like-count" id="likeCount"></span>
-    </button>
-    <button class="social-btn" id="shareBtn">
-      ⤴ <span id="shareText">Сподели</span>
     </button>
   </div>
   <div class="share-toast" id="shareToast"></div>

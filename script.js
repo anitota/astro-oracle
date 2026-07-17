@@ -413,7 +413,7 @@ async function initLikeShare(){
 
   shareBtn.addEventListener('click', async ()=>{
     const shareData = {
-      title: 'Дневен Оракул',
+      title: 'ORACLE',
       text: 'Всеки ден нова таро карта, хороскоп и астро прогноза — пробвай и ти.',
       url: window.location.href
     };

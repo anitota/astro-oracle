@@ -331,37 +331,40 @@ h1{
 .history-item span:last-child{ color:var(--gold-bright); }
 
 footer{
-  text-align:center; margin-top:56px; font-family:'Space Mono', monospace;
-  font-size:11px; color:rgba(185,166,224,0.5); letter-spacing:0.04em;
+  text-align:center; margin-top:56px; font-family:'Inter', sans-serif;
+  font-size:13px; color:var(--lavender); letter-spacing:0.02em; line-height:1.5;
+  max-width:420px; margin-left:auto; margin-right:auto;
 }
 
 .social-bar{
-  display:flex; justify-content:center; gap:12px; margin-top:24px;
+  display:flex; justify-content:center; gap:16px; margin-top:28px; flex-wrap:wrap;
 }
 .social-btn{
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; gap:10px;
   background:linear-gradient(160deg, var(--bg-panel), var(--bg-panel-2));
-  border:1px solid var(--line);
+  border:1.5px solid var(--line);
   color:var(--starlight);
-  font-family:'Space Mono', monospace;
-  font-size:12px;
-  letter-spacing:0.04em;
-  padding:10px 18px;
-  border-radius:24px;
+  font-family:'Inter', sans-serif;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:0.02em;
+  padding:16px 30px;
+  border-radius:30px;
   cursor:pointer;
   transition:transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.social-btn span:first-child{ font-size:20px; }
 .social-btn:hover{
   transform:translateY(-2px);
   border-color:var(--gold);
-  box-shadow:0 8px 20px -8px rgba(201,169,97,0.35);
+  box-shadow:0 10px 26px -10px rgba(201,169,97,0.4);
 }
 #likeBtn.liked{
   border-color:var(--rose);
   color:var(--rose);
 }
 #likeBtn.liked #likeIcon{ color:var(--rose); }
-.like-count{ color:var(--lavender); font-size:11px; }
+.like-count{ color:var(--gold-bright); font-size:14px; font-weight:700; }
 
 .share-toast{
   position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
