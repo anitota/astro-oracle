@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дневен Оракул</title>
 <link rel="stylesheet" href="style.css">
+<script data-goatcounter="https://anitota-orakul.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
 <div class="stars" id="stars"></div>
 
 <div class="wrap">
-  <div class="lang-switch" id="langSwitch"></div>
+  <div class="top-controls">
+    <div class="lang-switch" id="langSwitch"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Смени темата"></button>
+  </div>
 
   <div class="eyebrow" id="eyebrow"></div>
   <h1 id="title"></h1>
@@ -84,6 +88,15 @@
   </div>
 
   <footer id="footerText"></footer>
+  <div class="social-bar">
+    <button class="social-btn" id="likeBtn">
+      <span id="likeIcon">♡</span> <span id="likeText">Харесай</span> <span class="like-count" id="likeCount"></span>
+    </button>
+    <button class="social-btn" id="shareBtn">
+      ⤴ <span id="shareText">Сподели</span>
+    </button>
+  </div>
+  <div class="share-toast" id="shareToast"></div>
 </div>
 
 <script src="script.js"></script>

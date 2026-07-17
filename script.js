@@ -309,4 +309,129 @@ function changeLang(lang){
   if(profile && profile.signId){
     showDashboard(profile.signId);
   }
+
+  initLikeShare();
+  trackVisit();
+  checkOwnerStats();
+  initTheme();
 })();
+
+/* ---------------- THEME (light / dark) ---------------- */
+function initTheme(){
+  const btn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('oracle:theme') || 'dark';
+  applyTheme(saved);
+  btn.addEventListener('click', ()=>{
+    const current = document.body.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+  });
+}
+function applyTheme(theme){
+  document.body.setAttribute('data-theme', theme);
+  localStorage.setItem('oracle:theme', theme);
+  const btn = document.getElementById('themeToggle');
+  btn.textContent = theme === 'dark' ? '☀' : '☾';
+}
+
+/* ---------------- VISIT COUNTER (silent, owner-only view) ---------------- */
+function trackVisit(){
+  // fire-and-forget, doesn't block or show anything to regular visitors
+  fetch(`https://api.countapi.xyz/hit/${LIKE_NAMESPACE}/views`).catch(()=>{});
+}
+
+const OWNER_SECRET = 'orakul2026';
+
+async function checkOwnerStats(){
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('stats') !== OWNER_SECRET) return;
+
+  let views = '—', likes = '—';
+  try{
+    const v = await fetch(`https://api.countapi.xyz/get/${LIKE_NAMESPACE}/views`);
+    const vd = await v.json();
+    views = vd && typeof vd.value === 'number' ? vd.value : '—';
+  }catch(e){}
+  try{
+    const l = await fetch(`https://api.countapi.xyz/get/${LIKE_NAMESPACE}/likes`);
+    const ld = await l.json();
+    likes = ld && typeof ld.value === 'number' ? ld.value : '—';
+  }catch(e){}
+
+  const panel = document.createElement('div');
+  panel.className = 'owner-stats';
+  panel.innerHTML = `
+    <button class="owner-stats-close" aria-label="close">✕</button>
+    <div class="owner-stats-title">Само за теб</div>
+    <div class="owner-stats-row"><span>👁 Посещения</span><strong>${views}</strong></div>
+    <div class="owner-stats-row"><span>♥ Харесвания</span><strong>${likes}</strong></div>
+  `;
+  document.body.appendChild(panel);
+  panel.querySelector('.owner-stats-close').addEventListener('click', ()=> panel.remove());
+}
+
+/* ---------------- LIKE (shared counter across all visitors) ---------------- */
+const LIKE_NAMESPACE = 'dneven-orakul-anitota';
+
+async function initLikeShare(){
+  const likeBtn = document.getElementById('likeBtn');
+  const likeIcon = document.getElementById('likeIcon');
+  const likeCount = document.getElementById('likeCount');
+  const shareBtn = document.getElementById('shareBtn');
+  const toast = document.getElementById('shareToast');
+
+  const alreadyLiked = localStorage.getItem('oracle:liked') === '1';
+  if(alreadyLiked){
+    likeBtn.classList.add('liked');
+    likeIcon.textContent = '♥';
+  }
+
+  try{
+    const res = await fetch(`https://api.countapi.xyz/get/${LIKE_NAMESPACE}/likes`);
+    const data = await res.json();
+    likeCount.textContent = data && typeof data.value === 'number' ? data.value : '';
+  }catch(e){
+    likeCount.textContent = '';
+  }
+
+  likeBtn.addEventListener('click', async ()=>{
+    if(localStorage.getItem('oracle:liked') === '1'){
+      showToast(toast, 'Вече си харесал/а страницата 💛');
+      return;
+    }
+    likeBtn.classList.add('liked');
+    likeIcon.textContent = '♥';
+    localStorage.setItem('oracle:liked', '1');
+    try{
+      const res = await fetch(`https://api.countapi.xyz/hit/${LIKE_NAMESPACE}/likes`);
+      const data = await res.json();
+      likeCount.textContent = data && typeof data.value === 'number' ? data.value : '';
+    }catch(e){
+      likeCount.textContent = '';
+    }
+  });
+
+  shareBtn.addEventListener('click', async ()=>{
+    const shareData = {
+      title: 'Дневен Оракул',
+      text: 'Всеки ден нова таро карта, хороскоп и астро прогноза — пробвай и ти.',
+      url: window.location.href
+    };
+    if(navigator.share){
+      try{ await navigator.share(shareData); }catch(e){ /* user cancelled */ }
+    } else {
+      try{
+        await navigator.clipboard.writeText(window.location.href);
+        showToast(toast, 'Линкът е копиран!');
+      }catch(e){
+        showToast(toast, window.location.href);
+      }
+    }
+  });
+}
+
+function showToast(toast, msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>{ toast.classList.remove('show'); }, 2200);
+}
